@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number to Letter Conversion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script type="text/javascript">
+        function convertNumberToLetter() {
+            var number = parseInt(document.getElementById("number").value);
+            if (number >= 0 && number <= 40) {
+                document.getElementById("result").innerHTML = "E";
+            } else if (number >= 41 && number <= 55) {
+                document.getElementById("result").innerHTML = "D";
+            } else if (number >= 56 && number <= 60) {
+                document.getElementById("result").innerHTML = "C";
+            } else if (number >= 61 && number <= 65) {
+                document.getElementById("result").innerHTML = "BC";
+            } else if (number >= 66 && number <= 70) {
+                document.getElementById("result").innerHTML = "B";
+            } else if (number >= 71 && number <= 80) {
+                document.getElementById("result").innerHTML = "AB";
+            } else if (number >= 81 && number <= 100) {
+                document.getElementById("result").innerHTML = "A";
+            } else {
+                document.getElementById("result").innerHTML = "Invalid input";
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 h-screen">
+    <div class="container mx-auto p-4 pt-6">
+        <div class="flex justify-center">
+            <h1 class="text-4xl font-bold text-gray-800">Number to Letter Conversion</h1>
+        </div>
+        <div class="mt-4">
+            <div class="flex flex-wrap justify-center">
+                <input type="number" id="number" class="w-full p-2 text-lg text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-500" placeholder="Enter a number">
+                <button class="bg-orange-500 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded mt-4 ml-4" onclick="convertNumberToLetter()">Convert</button>
+            </div>
+        </div>
+        <p id="result" class="text-lg text-gray-600 mt-4 text-center"></p>
+    </div>
+</body>
+</html>
